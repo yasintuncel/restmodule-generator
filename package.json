@@ -1,0 +1,51 @@
+{
+  "name": "restmodule",
+  "displayName": "rest-module",
+  "description": "RestAPI Module Creator for NodeJS Express",
+  "version": "0.0.1",
+  "publisher": "Yasin Tuncel",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:restmodule.createModule"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "restmodule.createModule",
+        "title": "Create Module"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "restmodule.createModule",
+        "key": "shift+alt+m"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.73.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.8.4",
+    "@vscode/test-electron": "^2.2.0"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt"
+}
